@@ -1,0 +1,12 @@
+<% @todos.each do |t| %>
+    <%= t.description %>
+    <%= link_to 'mostrar', t %>
+    <%= link_to 'editar', todo_edit_path(t) %>
+    <%= link_to 'borrar', t, method: :delete %>
+    <%= link_to 'completado', todo_complete_path(t) %>
+<% end %>
+
+<%= link_to 'create todo', todos_new_path %> 
+    
+  
+  
